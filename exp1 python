@@ -1,0 +1,70 @@
+#QS1.Write a Python program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700
+
+for num in range(1500, 2701):
+  if num % 7 == 0 and num % 5 == 0:
+    print(num)
+
+#QS3.Write a Python program to construct the following pattern, using a nested for loop. 
+
+#upper part
+rows=5
+for i in range(rows):
+  for j in range(i+1):
+    print("*",end=" ")
+  print()
+#lower part
+for i in range(rows -1,0,-1):
+  for j in range(i):
+    print("*",end=" ")
+  print()
+
+#QS4.Write a Python program that accepts a word from the user and reverse it    
+  
+word=input("Enter a word")
+reverse_word=word[::-1]
+print('The reverse word',reverse_word)
+
+#QS5.Write a Python program to count the number of even and odd numbers from a series of numbers. Sample numbers : numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9)  
+
+numbers=[1,2,3,4,5,6,7,8,9]
+even_count=0
+odd_count=0
+for num in numbers:
+  if num%2==0:
+    even_count +=1
+  if num%2!=0:
+    odd_count +=1
+print("Even number",even_count)
+print("odd number",odd_count)       
+    
+#QS6.Write a Python program that prints all the numbers from 0 to 7 except 3 and 6. 
+#Note : Use 'continue' statement.
+
+for num in range(8):
+  if num==3 or num==6:
+     continue
+  print(num) 
+
+#QS7.Write a Python program which iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for the multiples of five print 
+# "Buzz". For numbers which are multiples of both three and five print "FizzBuzz". 
+  
+for num in range(1,51):
+  if num%15==0:
+    print("FizzBuzz")
+  elif num%3==0:
+    print("Fizz")
+  elif num%5==0:
+    print("Buzz")
+  else:
+    print(num)    
+
+#QS9]Write a Python program that accepts a sequence of lines (blank line to terminate) as input and prints the lines as output (all characters in lower case).  
+lines = []
+while True:
+  line = input().lower()  # Read and convert to lowercase
+  if not line:  # Check for empty line
+    break
+  lines.append(line)
+
+for line in lines:
+  print(line)
